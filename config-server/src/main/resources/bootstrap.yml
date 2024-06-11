@@ -1,1 +1,23 @@
-spring.application.name=config-server
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AbelPalominoRojas/book-rental-microservice.git
+          search-paths: server-config-files
+          default-label: main
+          clone-on-start: true
+          force-pull: false
+          refresh-pull: 15
+
+
+server:
+  port: 9000
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
