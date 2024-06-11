@@ -10,7 +10,7 @@ spring:
           default-label: main
           clone-on-start: true
           force-pull: false
-          refresh-pull: 15
+          refresh-rate: 15
 
 
 server:
@@ -21,3 +21,6 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+encrypt:
+  key: $2y$10$.LfsX5kzVpfMAqpHQNa.IuX7bIbQ7//WrdQ1sOjWQrFz3UyQs/eae
